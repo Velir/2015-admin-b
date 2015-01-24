@@ -14,7 +14,11 @@ namespace AchievementTracker.AchievementTracker
 			var items = db.GetItems("{4233AB87-4CF3-46F2-9909-230510ECF4C6}").Where(i => i.TemplateID == new ID("{23AC8ACA-6407-4DF8-A548-53F62BB9ADDC}"));
 
 			AchievementManager userProfile = new AchievementManager(Sitecore.Context.User);
-				userProfile.SetCustomAchievement("{9F8DF07B-FCEC-4607-BE3F-4576F4C3A4CC}");
+			userProfile.SetCustomAchievement("{9F8DF07B-FCEC-4607-BE3F-4576F4C3A4CC}");
+			if (!items.Any())
+			{
+				return null;
+			}
 			return Json(items.Select(item => new Achievement { Name = item.GetField("Title"), Image = ThemeManager.GetImage(item.GetField("Icon"), 32, 32), Description = item.GetField("Description") }), JsonRequestBehavior.AllowGet);
 		}
 
@@ -46,6 +50,10 @@ namespace AchievementTracker.AchievementTracker
 			{
 				Database db = Sitecore.Data.Database.GetDatabase("master");
 				var item = db.GetItem(achievementGuid);
+				if (item == null)
+				{
+					continue;
+				}
 				achievements.Add(new Achievement { Name = item.GetField("Title"), Image = ThemeManager.GetImage(item.GetField("Icon"), 32, 32, "", "", item.GetField("Description"),"", true), Description = item.GetField("Description") });
 			}
 			return achievements;
