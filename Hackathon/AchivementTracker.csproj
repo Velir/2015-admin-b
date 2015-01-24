@@ -192,7 +192,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
-    <Folder Include="Profile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
