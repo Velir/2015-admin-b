@@ -1,4 +1,4 @@
-﻿'@using Sitecore.Mvc
+﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
 @using Sitecore.Web.UI.Controls.Common.UserControls
 @model RenderingModel
@@ -12,8 +12,10 @@
 <div @htmlAttributes>
 	<div data-bind="foreach: output">
 		<div class="row"  style="clear:both">
-			<div style="float:left" data-bind="html:Image" ></div>
-			<div style="float:left" data-bind="text:Name"></div>
+			<div style="float:left;margin:10px;" data-bind="html:Image" ></div>
+			<div style="float:left;width:200px;margin:10px;" data-bind="text:Name"></div>
+			<div style="float:left;padding-left:20px;margin:10px;" data-bind="text:Description"></div>
+
 		</div>
 </div>
 </div>
