@@ -1,13 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-
-using AchievementTracker.AchievementTracker;
-
 using Sitecore.Data;
 using Sitecore.Data.Managers;
 
-namespace AchievementTracker.sitecore.shell.client.YourApps
+namespace AchievementTracker.AchievementTracker
 {
 	public class AchievementController:Controller
 	{
