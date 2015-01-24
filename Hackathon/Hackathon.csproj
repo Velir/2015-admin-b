@@ -47,8 +47,38 @@
     <Reference Include="Sitecore.Analytics">
       <HintPath>..\Libs\Sitecore.Analytics.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Analytics.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore.Analytics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore.Analytics.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore.Analytics.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Sql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore.Analytics.Sql.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Buckets">
+      <HintPath>..\Libs\Sitecore.Buckets.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Buckets.Client">
+      <HintPath>..\Libs\Sitecore.Buckets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore.ContentSearch.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.ContentTesting">
       <HintPath>..\Libs\Sitecore.ContentTesting.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ExperienceEditor.Speak.Ribbon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore.ExperienceEditor.Speak.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\Libs\Sitecore.Kernel.dll</HintPath>
@@ -142,9 +172,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AchievementTracker\AchievementManager.cs" />
-    <Compile Include="AchievementTracker\AchievementTrackerIDs.cs" />
     <Compile Include="Controllers\ScratchController.cs" />
+    <Compile Include="Pipelines\CreateBucketAchievement.cs" />
     <Compile Include="Pipelines\SaveItemAchievements.cs" />
     <Compile Include="Models\Scratch.cs" />
     <Compile Include="Pipelines\StartTestAchievement.cs" />
@@ -156,8 +185,6 @@
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.js" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.test.js" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementPageCode.js" />
-    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementUserList.js" />
-    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementUserList.test.js" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -179,7 +206,6 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.cshtml" />
     <Content Include="Views\layouts\Main.cshtml" />
-    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementUserList.cshtml" />
     <Content Include="Views\Scratch\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
