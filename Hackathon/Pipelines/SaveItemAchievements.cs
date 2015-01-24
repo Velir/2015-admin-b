@@ -1,5 +1,6 @@
 ﻿using System.Linq;
-
+using Hackathon.AchievementTracker;
+using Hackathon.Profile;
 using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Items;
@@ -35,6 +36,8 @@ namespace Hackathon.Pipelines
 
             if (string.IsNullOrEmpty(oldTracking) && newTracking != null && !string.IsNullOrEmpty(newTracking.Value))
             {
+                AchievementManager achievementManager = new AchievementManager(Sitecore.Context.User);
+                achievementManager.SetCustomAchievement(AchievementTrackerIDs.SetFirstProfileCardId);
                 Sitecore.Diagnostics.Log.Info("Profile Card added.", this);
             }
 
@@ -51,6 +54,8 @@ namespace Hackathon.Pipelines
             if (!oldLayout.Contains(_conditionTag) && !oldFinalRendering.Contains(_conditionTag)
                 && (HasConditionTag(newLayout) || HasConditionTag(newFinal)))
             {
+                AchievementManager achievementManager = new AchievementManager(Sitecore.Context.User);
+                achievementManager.SetCustomAchievement(AchievementTrackerIDs.FirstPersonalizationRuleAchievementId);
                 Sitecore.Diagnostics.Log.Info("Personalizaton rule added", this); //TODO Fire achievement instead.
             }
         }

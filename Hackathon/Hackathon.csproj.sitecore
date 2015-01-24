@@ -1,7 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <PropertyGroup>
-    <Site Server="hackathon-web" UserName="sitecore\admin" IsRemoteSitecore="True" />
-  </PropertyGroup>
-  <ItemGroup />
+﻿<Project>
+  <Site Server="http://2015schackathon.coreyc.dev.velir.com/" UserName="sitecore\admin" IsRemoteSitecore="True" />
 </Project>
