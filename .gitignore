@@ -154,3 +154,11 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+#==============
+# Project Specific excludes
+#==============
+Libs\*
+*.dll
+Libs/*
+packages/*
