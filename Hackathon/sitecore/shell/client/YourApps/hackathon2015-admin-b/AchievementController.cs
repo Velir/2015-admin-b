@@ -18,22 +18,15 @@ namespace Hackathon.sitecore.shell.client.YourApps.hackathon2015_admin_b
 			Database db = Sitecore.Data.Database.GetDatabase("master");
 			var items = db.GetItems("{4233AB87-4CF3-46F2-9909-230510ECF4C6}").Where(i => i.TemplateID == new ID("{23AC8ACA-6407-4DF8-A548-53F62BB9ADDC}"));
 
-			AchievementProfile userProfile = Sitecore.Context.User.Profile as AchievementProfile;
-			if (userProfile != null)
-			{
-				userProfile.Add("{9F8DF07B-FCEC-4607-BE3F-4576F4C3A4CC}");
-			}
-
+			AchievementManager userProfile = new AchievementManager(Sitecore.Context.User);
+				userProfile.SetCustomAchievement("{9F8DF07B-FCEC-4607-BE3F-4576F4C3A4CC}");
 			return Json(items.Select(item => new Achievement { Name = item.GetField("Title"), Image = ThemeManager.GetImage(item.GetField("Icon"), 32, 32), Description = item.GetField("Description") }), JsonRequestBehavior.AllowGet);
 		}
 
 		public JsonResult GetMyAchievements()
 		{
 			AchievementManager achievementManager = new AchievementManager(Sitecore.Context.User);
-		    List<string> achievementsList = achievementManager.Achievements;
-            if (achievementsList == null)
-			
-			return Json(GetAchievements(userProfile), JsonRequestBehavior.AllowGet);
+			return Json(GetAchievements(achievementManager), JsonRequestBehavior.AllowGet);
 		}
 
 		public JsonResult GetUsers()
@@ -42,19 +35,19 @@ namespace Hackathon.sitecore.shell.client.YourApps.hackathon2015_admin_b
 			List<UserAchievements> userAchievements  = new List<UserAchievements>();
 			foreach (var user in users)
 			{
-				userAchievements.Add(new UserAchievements{Name = user.Name, Achievements = GetAchievements(user.Profile as AchievementProfile)});
+				userAchievements.Add(new UserAchievements { Name = user.Name, Achievements = GetAchievements(new AchievementManager(user)) });
 			}
 			return Json(userAchievements, JsonRequestBehavior.AllowGet);
 		}
 
-		private List<Achievement> GetAchievements(AchievementProfile userProfile)
+		private List<Achievement> GetAchievements(AchievementManager userProfile)
 		{if (userProfile == null)
 			{
 				return null;
 			}
 
 			List<Achievement> achievements = new List<Achievement>();
-            foreach (string achievementGuid in achievementsList)
+            foreach (string achievementGuid in userProfile.Achievements)
 			{
 				Database db = Sitecore.Data.Database.GetDatabase("master");
 				var item = db.GetItem(achievementGuid);

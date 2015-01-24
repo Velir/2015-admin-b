@@ -142,11 +142,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AchievementTracker\AchievementManager.cs" />
+    <Compile Include="AchievementTracker\AchievementTrackerIDs.cs" />
     <Compile Include="Controllers\ScratchController.cs" />
     <Compile Include="Pipelines\SaveItemAchievements.cs" />
     <Compile Include="Models\Scratch.cs" />
     <Compile Include="Pipelines\StartTestAchievement.cs" />
-    <Compile Include="Profile\AchievementProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementController.cs" />
   </ItemGroup>
@@ -162,6 +163,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
+    <Folder Include="Profile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
