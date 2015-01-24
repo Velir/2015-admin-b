@@ -4,7 +4,7 @@
     	this._super();
 	    this.set("output", "");
     	$.ajax({
-    		url: "/api/sitecore/achievement/getachievements",
+    		url: "/api/sitecore/achievement/getmyachievements",
     		type: "GET",
     		context: this,
     		success: function (data) {

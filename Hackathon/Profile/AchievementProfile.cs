@@ -44,6 +44,19 @@ namespace Hackathon.Profile
             }
         }
 
+	    public List<string> Achievements
+	    {
+		    get
+			{
+				string propertyValues = Achievement;
+				if (propertyValues == null)
+				{
+					return new List<string>();
+				}
+
+				return  propertyValues.Split('|').ToList();
+		    }
+	    }
 
     }
 }
