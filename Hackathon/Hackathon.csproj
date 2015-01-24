@@ -151,8 +151,6 @@
     <Content Include="Global.asax" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.js" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.test.js" />
-    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\Test1.js" />
-    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\Test1.test.js" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -172,7 +170,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\Test1.cshtml" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.cshtml" />
   </ItemGroup>
   <PropertyGroup>
