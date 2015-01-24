@@ -142,6 +142,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ScratchController.cs" />
+    <Compile Include="Models\Scratch.cs" />
     <Compile Include="Pipelines\StartTestAchievement.cs" />
     <Compile Include="Profile\AchievementProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,8 +159,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -172,6 +172,8 @@
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.cshtml" />
+    <Content Include="Views\layouts\Main.cshtml" />
+    <Content Include="Views\Scratch\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

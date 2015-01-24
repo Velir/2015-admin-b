@@ -1,0 +1,17 @@
+﻿@using Sitecore.Mvc
+@model Sitecore.Mvc.Presentation.RenderingModel
+@{
+  Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+</head>
+  <body>
+    <h1>@Html.Sitecore().Field("title")</h1>
+    <div>
+      @Html.Sitecore().Placeholder("main")
+    </div>
+  </body>
+</html>

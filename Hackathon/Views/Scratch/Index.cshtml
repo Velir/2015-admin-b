@@ -1,0 +1,39 @@
+﻿@model Hackathon.Models.Scratch
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Scratch</title>
+</head>
+<body>
+    <div>
+        @{
+            var time = DateTime.Now;
+        }
+        @using (Html.BeginForm())
+        {
+            <input type="submit" name="submit" value="ShowAchievements" />
+            <input type="submit" name="submit" value="ClearAchievements" />
+            <input type="submit" name="submit" value="AddCreateFirstABTestAchievement" />
+            <input type="submit" name="submit" value="AddCreateFirstPersonalizationRuleAchievement" />
+            <input type="submit" name="submit" value="AddProfileFirstContentItemAchievement" />
+            <br/>
+            if (Model != null && Model.OutputOne != null)
+            {
+                foreach (string achievement in Model.OutputOne)
+                {
+                    <h2>Achievement = @achievement</h2>
+                }
+            }
+            <p>
+                <h2>Raw Profile Output = @Model.OutputTwo</h2>
+            </p>
+        }
+    </div>
+</body>
+</html>
