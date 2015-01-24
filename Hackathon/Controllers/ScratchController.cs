@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using Hackathon.AchievementTracker;
 using Hackathon.Models;
 using Hackathon.Profile;
-using Microsoft.Ajax.Utilities;
-using Sitecore.Mvc.Controllers;
-using Sitecore.Mvc.Presentation;
+using Sitecore;
 
 namespace Hackathon.Controllers
 {
@@ -24,33 +20,33 @@ namespace Hackathon.Controllers
         public ActionResult Index(string submit)
         {
             Scratch scratch = new Scratch();
-            AchievementProfile achievementProfile = new AchievementProfile(Sitecore.Context.User);
+            AchievementManager achievementManager = new AchievementManager(Context.User);
 
             if (submit == "ShowAchievements")
             {
-                List<string> achievements = achievementProfile.Achievements;
+                List<string> achievements = achievementManager.Achievements;
                 scratch.OutputOne = achievements;
-                scratch.OutputTwo = Sitecore.Context.User.Profile.GetCustomProperty("achievements");
+                scratch.OutputTwo = Context.User.Profile.GetCustomProperty("achievements");
             }
 
             if (submit == "ClearAchievements")
             {
-                achievementProfile.ClearAchievements();
+                achievementManager.ClearAchievements();
             }
 
             if (submit == "AddCreateFirstABTestAchievement")
             {
-                achievementProfile.ActivateFirstABTestAchievement();
+                achievementManager.SetCustomAchievement(AchievementTrackerIDs.FirstAbTestAchievementId);
             }
 
             if (submit == "AddCreateFirstPersonalizationRuleAchievement")
             {
-                achievementProfile.ActivateFirstPersonalizationRuleAchievement();
+                achievementManager.SetCustomAchievement(AchievementTrackerIDs.FirstPersonalizationRuleAchievementId);
             }
 
             if (submit == "AddProfileFirstContentItemAchievement")
             {
-                achievementProfile.ActivateProfileFirstContentItemAchievement();
+                achievementManager.SetCustomAchievement(AchievementTrackerIDs.SetFirstProfileCardId);
             }
 
             return View(scratch);

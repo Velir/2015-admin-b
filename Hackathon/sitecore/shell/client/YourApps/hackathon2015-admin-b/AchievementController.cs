@@ -21,8 +21,8 @@ namespace Hackathon.sitecore.shell.client.YourApps.hackathon2015_admin_b
 
 		public JsonResult GetMyAchievements()
 		{
-			AchievementProfile achievementProfile = new AchievementProfile(Sitecore.Context.User);
-		    List<string> achievementsList = achievementProfile.Achievements;
+			AchievementManager achievementManager = new AchievementManager(Sitecore.Context.User);
+		    List<string> achievementsList = achievementManager.Achievements;
             if (achievementsList == null)
 			{
 				return null;

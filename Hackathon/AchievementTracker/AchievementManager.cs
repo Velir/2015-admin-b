@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Helpers;
-using Microsoft.Ajax.Utilities;
 using Newtonsoft.Json;
-using Sitecore.Mvc.Controllers;
+using Sitecore.Security.Accounts;
 
 namespace Hackathon.Profile
 {
-    public class AchievementProfile
+    /// <summary>
+    /// Achievement Manager handles saving and retrieving of User based achievements.  
+    /// </summary>
+    public class AchievementManager
     {
-        private Sitecore.Security.Accounts.User _user;
+        private User _user;
 
-        public AchievementProfile(Sitecore.Security.Accounts.User user)
+        public AchievementManager(User user)
         {
             _user = user;
         }
@@ -46,32 +45,12 @@ namespace Hackathon.Profile
             }
         }
 
-        
-
         public void ClearAchievements()
         {
             _achievements = string.Empty;
         }
 
-        public void ActivateFirstABTestAchievement()
-        {
-            const string createFirstAbTestGuid = "{F9810B88-B838-4AE9-BA5B-9E3CB151F05B}";
-            _achievements = SetCustomAchievement(createFirstAbTestGuid);
-        }
-
-        public void ActivateFirstPersonalizationRuleAchievement()
-        {
-            const string createFirstPersonalizationRuleGuid = "{6C3DC925-CD85-4A9D-A6B6-AE4259537A62}";
-            _achievements = SetCustomAchievement(createFirstPersonalizationRuleGuid);
-        }
-
-        public void ActivateProfileFirstContentItemAchievement()
-        {
-            const string profileFirstContentItemGuid = "{C247CC31-0079-45A6-9BF0-6FDA6BE1F4C2}";
-            _achievements = SetCustomAchievement(profileFirstContentItemGuid);
-        }
-
-        private string SetCustomAchievement(string achievementGuid)
+        public void SetCustomAchievement(string achievementGuid)
         {
             string propertyValues = _achievements;
 
@@ -87,7 +66,7 @@ namespace Hackathon.Profile
                 achievements.Add(achievementGuid);
             }
 
-            return JsonConvert.SerializeObject(achievements);
+            _achievements = JsonConvert.SerializeObject(achievements);
         }
 
 
