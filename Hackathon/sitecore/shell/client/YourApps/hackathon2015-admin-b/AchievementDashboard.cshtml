@@ -9,12 +9,29 @@
 
 	var htmlAttributes = rendering.HtmlAttributes;
 }
+
 <div @htmlAttributes>
-	<div data-bind="foreach: output">
-		<div class="row" style="clear:both">
-			<div style="display:inline-block;margin-left:10px;max-width:10%" data-bind="html:Image"></div>
-			<div style="display:inline-block;padding-left:20px;width:30%;" data-bind="text:Name"></div>
-			<div style="display:inline-block;padding-left:20px;max-width:60%" data-bind="text:Description"></div>
+	<link href="/sitecore/shell/themes/standard/default/Grid.css" rel="stylesheet">
+	<div>
+		<div class="sc-listcontrol-body">
+			<table class="sc-table table">
+				<tbody>
+					<tr class="HeadingRow"><td class="HeadingCell" colspan="1"></td><td class="HeadingCell" colspan="2"></td><td class="HeadingCell" colspan="3"></td></tr>
+					<!-- ko foreach: output -->
+					<tr class="Row">
+						<td colspan="1" class="DataCell">
+							<div data-bind="html:Image"></div>
+						</td>
+						<td colspan="2" class="DataCell">
+							<div data-bind="text:Name"></div>
+						</td>
+						<td colspan="3" class="DataCell">
+							<div data-bind="text:Description"></div>
+						</td>
+					</tr>
+					<!-- /ko -->
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
