@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ScratchController.cs" />
+    <Compile Include="Pipelines\SaveItemAchievements.cs" />
     <Compile Include="Models\Scratch.cs" />
     <Compile Include="Pipelines\StartTestAchievement.cs" />
     <Compile Include="Profile\AchievementProfile.cs" />
@@ -169,6 +170,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\ZZ_Hackathon\ZZ_Hackathon.Achievements.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.cshtml" />
