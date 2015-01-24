@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Newtonsoft.Json;
+
 using Sitecore.Security.Accounts;
 
-namespace Hackathon.Profile
+namespace AchievementTracker.AchievementTracker
 {
     /// <summary>
     /// Achievement Manager handles saving and retrieving of User based achievements.  

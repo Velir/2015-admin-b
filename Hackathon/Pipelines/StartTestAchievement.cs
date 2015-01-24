@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Sitecore.ContentTesting.Pipelines.StartTest;
 
-using Microsoft.Ajax.Utilities;
-
-using Sitecore.ApplicationCenter.Applications;
-using Sitecore.ContentTesting.Pipelines.StartTest;
-
-namespace Hackathon.Pipelines
+namespace AchievementTracker.Pipelines
 {
     public class StartTestAchievement : StartTestProcessor
     {

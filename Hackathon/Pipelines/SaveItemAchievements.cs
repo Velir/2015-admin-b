@@ -1,12 +1,13 @@
 ﻿using System.Linq;
-using Hackathon.AchievementTracker;
-using Hackathon.Profile;
+
+using AchievementTracker.AchievementTracker;
+
 using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Pipelines.Save;
 
-namespace Hackathon.Pipelines
+namespace AchievementTracker.Pipelines
 {
     public class SaveItemAchievements
     {

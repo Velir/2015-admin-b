@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Sitecore.Data.Items;
+
 using Sitecore.Mvc.Presentation;
 
-namespace Hackathon.Models
+namespace AchievementTracker.Models
 {
     public class Scratch : RenderingModel
     {

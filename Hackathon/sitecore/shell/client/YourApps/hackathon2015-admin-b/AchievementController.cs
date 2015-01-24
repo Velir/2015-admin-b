@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Hackathon.Profile;
-using Sitecore.ApplicationCenter.Applications;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Data.Managers;
-using Sitecore.Web;
 
-namespace Hackathon.sitecore.shell.client.YourApps.hackathon2015_admin_b
+using AchievementTracker.AchievementTracker;
+
+using Sitecore.Data;
+using Sitecore.Data.Managers;
+
+namespace AchievementTracker.sitecore.shell.client.YourApps
 {
 	public class AchievementController:Controller
 	{

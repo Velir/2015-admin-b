@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using Hackathon.AchievementTracker;
-using Hackathon.Models;
-using Hackathon.Profile;
+
+using AchievementTracker.AchievementTracker;
+using AchievementTracker.Models;
+
 using Sitecore;
 
-namespace Hackathon.Controllers
+namespace AchievementTracker.Controllers
 {
     public class ScratchController : Controller
     {
