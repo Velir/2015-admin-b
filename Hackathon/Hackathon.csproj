@@ -53,6 +53,18 @@
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\Libs\Sitecore.Kernel.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore\Sitecore.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Speak.Client, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore\Sitecore.Speak.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sitecore\Sitecore.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -133,9 +145,14 @@
     <Compile Include="Pipelines\StartTestAchievement.cs" />
     <Compile Include="Profile\AchievementProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.js" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.test.js" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\Test1.js" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\Test1.test.js" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +172,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\Test1.cshtml" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
