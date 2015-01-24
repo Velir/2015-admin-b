@@ -3,19 +3,18 @@
 @using Sitecore.Web.UI.Controls.Common.UserControls
 @model RenderingModel
 @{
-  var rendering = Html.Sitecore().Controls().GetUserControl(Model.Rendering);
-  rendering.Class = "sc-AchievementDashboard";
-  rendering.Requires.Script("client", "AchievementDashboard.js");
+	var rendering = Html.Sitecore().Controls().GetUserControl(Model.Rendering);
+	rendering.Class = "sc-AchievementDashboard";
+	rendering.Requires.Script("client", "AchievementDashboard.js");
 
-  var htmlAttributes = rendering.HtmlAttributes;
-}      
+	var htmlAttributes = rendering.HtmlAttributes;
+}
 <div @htmlAttributes>
 	<div data-bind="foreach: output">
-		<div class="row"  style="clear:both">
-			<div style="float:left;margin:10px;" data-bind="html:Image" ></div>
-			<div style="float:left;width:200px;margin:10px;" data-bind="text:Name"></div>
-			<div style="float:left;padding-left:20px;margin:10px;" data-bind="text:Description"></div>
-
+		<div class="row" style="clear:both">
+			<div style="display:inline-block;margin-left:10px;max-width:10%" data-bind="html:Image"></div>
+			<div style="display:inline-block;padding-left:20px;width:30%;" data-bind="text:Name"></div>
+			<div style="display:inline-block;padding-left:20px;max-width:60%" data-bind="text:Description"></div>
 		</div>
-</div>
+	</div>
 </div>
