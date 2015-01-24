@@ -44,6 +44,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\Libs\Sitecore.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.ContentTesting">
+      <HintPath>..\Libs\Sitecore.ContentTesting.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\Libs\Sitecore.Kernel.dll</HintPath>
     </Reference>
@@ -145,7 +151,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\ZZ_Hackathon.Achievements.config">
+    <Content Include="App_Config\Include\ZZ_Hackathon\ZZ_Hackathon.Achievements.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
