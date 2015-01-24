@@ -5,11 +5,32 @@ using System.Web;
 using System.Web.Helpers;
 using Microsoft.Ajax.Utilities;
 using Newtonsoft.Json;
+using Sitecore.Mvc.Controllers;
 
 namespace Hackathon.Profile
 {
     public class AchievementProfile
     {
+        private Sitecore.Security.Accounts.User _user;
+
+        public AchievementProfile(Sitecore.Security.Accounts.User user)
+        {
+            _user = user;
+        }
+
+        private string _achievements
+        {
+            get
+            {
+                return _user.Profile.GetCustomProperty("achievements");
+            }
+            set
+            {
+                _user.Profile.SetCustomProperty("achievements", value);
+                _user.Profile.Save();
+            }
+        }
+
         public List<string> Achievements
         {
             get
@@ -25,23 +46,13 @@ namespace Hackathon.Profile
             }
         }
 
-        private string _achievements
-        {
-            get
-            {
-                return Sitecore.Context.User.Profile.GetCustomProperty("achievements");
-            }
-            set
-            {
-                Sitecore.Context.User.Profile.SetCustomProperty("achievements", value);
-                Sitecore.Context.User.Profile.Save();
-            }
-        }
+        
 
         public void ClearAchievements()
         {
             _achievements = string.Empty;
         }
+
         public void ActivateFirstABTestAchievement()
         {
             const string createFirstAbTestGuid = "{F9810B88-B838-4AE9-BA5B-9E3CB151F05B}";
@@ -79,6 +90,6 @@ namespace Hackathon.Profile
             return JsonConvert.SerializeObject(achievements);
         }
 
-	   
+
     }
 }
