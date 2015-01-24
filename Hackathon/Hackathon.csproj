@@ -155,6 +155,8 @@
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.js" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.test.js" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementPageCode.js" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementUserList.js" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementUserList.test.js" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +177,7 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementDashboard.cshtml" />
     <Content Include="Views\layouts\Main.cshtml" />
+    <Content Include="sitecore\shell\client\YourApps\hackathon2015-admin-b\AchievementUserList.cshtml" />
     <Content Include="Views\Scratch\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
