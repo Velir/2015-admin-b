@@ -21,15 +21,16 @@ namespace Hackathon.sitecore.shell.client.YourApps.hackathon2015_admin_b
 
 		public JsonResult GetMyAchievements()
 		{
-			AchievementProfile userProfile = Sitecore.Context.User.Profile as AchievementProfile;
-			if (userProfile == null)
+			AchievementProfile achievementProfile = new AchievementProfile();
+		    List<string> achievementsList = achievementProfile.Achievements;
+            if (achievementsList == null)
 			{
 				return null;
 			}
-			List<Achievement> achievements = new List<Achievement>();
-			foreach (string achievementGuid in userProfile.Achievements)
-			{
 
+			List<Achievement> achievements = new List<Achievement>();
+            foreach (string achievementGuid in achievementsList)
+			{
 				Database db = Sitecore.Data.Database.GetDatabase("master");
 				var item = db.GetItem(achievementGuid);
 				achievements.Add(new Achievement { Name = item.GetField("Title"), Image = ThemeManager.GetImage(item.GetField("Icon"), 32, 32) });
