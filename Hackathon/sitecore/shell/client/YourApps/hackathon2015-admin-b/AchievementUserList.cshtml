@@ -9,16 +9,25 @@
 
 	var htmlAttributes = rendering.HtmlAttributes;
 }
-<div @htmlAttributes>
-	<div data-bind="foreach: output">
-		<div class="row" style="clear:both">
-			<div>
-				<span style="float:left;width:200px;margin:10px;" data-bind="text:Name" />
-			</div>
-			<div data-bind="foreach:Achievements">
-				<div style="float:left;margin:10px;" data-bind="html:Image"></div>
-			</div>
 
-		</div>
+<div @htmlAttributes>
+<link href="/sitecore/shell/themes/standard/default/Grid.css" rel="stylesheet">
+<div>
+	<div class="sc-listcontrol-body">
+		<table class="sc-table table">
+			<tbody data-bind="foreach: output">
+				<tr class="Row">
+					<td colspan="1" class="DataCell">
+						<div data-bind="text:Name"></div>
+					</td>
+					<td colspan="2" class="DataCell">
+						<div data-bind="foreach:Achievements">
+							<div style="float:left;margin:10px;" data-bind="html:Image"></div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
+</div>
 </div>
