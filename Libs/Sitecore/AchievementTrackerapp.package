@@ -1,0 +1,80 @@
+<project site="hackathon-web" format="Zip Package">
+  <Metadata>
+    <metadata>
+      <PackageName>AchievementTrackerapp</PackageName>
+      <Author>admin-b</Author>
+      <Version>1</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme />
+      <Publisher />
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Marketing/AchievementTracker/{9DD6EAC1-2965-44CD-86CB-04B928E28C20}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/Achivements/PageSettings/AchievementDashboard/AchievementDashboard-Parameters/__Standard Values/{AFF572D1-73BF-47EE-BBF2-464BAC55B525}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/Achivements/PageSettings/AchievementDashboard/AchievementDashboard-Parameters/Data/Input/{DC67C683-58AE-4B01-A5DE-9F7D67CB7D94}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/Achivements/PageSettings/AchievementDashboard/AchievementDashboard-Parameters/Data/{844D26C5-965D-4B91-8C11-4182D6A4FBAC}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/Achivements/PageSettings/AchievementDashboard/AchievementDashboard-Parameters/{0C6B176A-8E22-4911-9FEE-A3565DA4721C}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/Achivements/PageSettings/AchievementDashboard/{13CBA8D5-22FD-456B-A521-063C45CCD160}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/Achivements/PageSettings/{6A010F24-E67D-476E-95ED-9D4F549EF4B0}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/Achivements/{C0A1CDF8-C32F-4C90-A6C4-AF54C0C3628C}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Your Apps/AchievementTracker/{06CA18C8-E791-44BC-823B-896BF957E192}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+    <xfiles>
+      <Entries />
+      <Converter>
+        <FileToEntryConverter>
+          <Root />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
