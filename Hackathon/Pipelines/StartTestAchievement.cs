@@ -1,4 +1,5 @@
-﻿using Sitecore.ContentTesting.Pipelines.StartTest;
+﻿using AchievementTracker.AchievementTracker;
+using Sitecore.ContentTesting.Pipelines.StartTest;
 
 namespace AchievementTracker.Pipelines
 {
@@ -8,11 +9,12 @@ namespace AchievementTracker.Pipelines
         {
             if (args.Test == null)
                 return;
+
+            AchievementManager achievementManager = new AchievementManager(Sitecore.Context.User);
+            achievementManager.SetCustomAchievement(AchievementTrackerIDs.FirstAbTestAchievementId);
             Sitecore.Diagnostics.Log.Info("StartTestAchievement earned", this);
-            var comment = Sitecore.Context.User.Profile.Comment;
-            //var profile = new Hackathon.Profile.AchievementProfile();
-            //profile.Achievement += "{798F4733-43BD-4B4A-B741-1098F9A05603}";
-            comment += "Test started 2.";
+            
+            
             
 
 
