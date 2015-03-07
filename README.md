@@ -2,7 +2,7 @@
 The Sitecore Achievement Tracker incorporates gamification into the Sitecore editor experience. Sitecore 8 offers a wide variety of new features for both Content Editors and Marketers and the Achievement Tracker incentivizes new and experienced Sitecore users to explore various aspects of the system. The tracker has been built in an extensible fashion, allowing module users to cater achievements to their specific needs.
 
 ## Sitecore Package
-1. Install Sitecore package: **Achievement Tracker.zip**
+1. Install Sitecore package: **Achievement Tracker-1.zip**
 2. No publishing is required, since all items are in core or master databases.
 
 ## Technical Details
@@ -16,7 +16,7 @@ Logging of achievements is enabled.
 Currently, the following achievements are enabled:  
 1. Create an A/B Test.  This is awarded when the test is started.  
 2. Create an item bucket.  
-3. Add a personalization rule. This is awarded when the personalization rule is installed.  
+3. Add a personalization rule.   
 
 ## How to Add an Achievement
 1. Add a pipeline processor to record the achievement.
@@ -34,6 +34,6 @@ Currently, the following achievements are enabled:
 6. Enable achievements for non-pipeline related actions.
 
 ## Note: 
-This module was created by team **admin/b** (Dan Solovay, Alex Jackson, Corey Caplette) as part of the 2015 Sitecore Hackathon. It was the winning entry in the "Best Business  User Experience Module" category.
+This module was created by the Velir team **admin/b** (Dan Solovay, Alex Jackson, Corey Caplette) as part of the 2015 Sitecore Hackathon. It was the winning entry in the "Best Business  User Experience Module" category.
 
 
