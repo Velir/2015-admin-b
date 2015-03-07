@@ -21,7 +21,7 @@ Currently, the following achievements are enabled:
 ## How to Add an Achievement
 1. Add a pipeline processor to record the achievement.
 2. Optional: Add a logging message to confirm the achievement fires as expected. This can be done by adding this line:
-`Sitecore.Diagnostics.Log.Info(“Achievement XXXX earned!”, this);`
+`Sitecore.Diagnostics.Log.Info("Achievement XXXX earned!", this);`
 3. Create a content item in System/Modules/Achievement Tracker
 
 
