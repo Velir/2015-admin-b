@@ -3,7 +3,7 @@ The Sitecore Achievement Tracker incorporates gamification into the Sitecore edi
 
 ## Sitecore Package
 1. Install Sitecore package: **Achievement Tracker.zip**
-2.	No publishing is required, since all items are in core or master databases.
+2. No publishing is required, since all items are in core or master databases.
 
 ## Technical Details
 Achievement data is currently stored as a custom user profile property in the ASP.NET Membership Database.
@@ -13,12 +13,12 @@ Achievements are triggered through Custom Pipeline handlers.  Any event that can
 Logging of achievements is enabled.  
 
 ## Available Achievements
-Currently, the following achievements are enabled:
+Currently, the following achievements are enabled:  
 1. Create an A/B Test.  This is awarded when the test is started.
 2. Create an item bucket.
 3. Add a personalization rule. This is awarded when the personalization rule is installed.
 
-## How to Add and Achievement
+## How to Add an Achievement
 1. Add a pipeline processor to record the achievement.
 2. Optional: Add a logging message to confirm the achievement fires as expected. This can be done by adding this line:
 Sitecore.Diagnostics.Log.Info(“Achievement XXXX earned!”, this);
